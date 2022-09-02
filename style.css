@@ -1,48 +1,125 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 body {
-    background: url('https://images.unsplash.com/photo-1621274403997-37aace184f49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1');
-    background-size: cover;
+    background-image: url('https://source.unsplash.com/1600x900/?weather');
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    height: 100vh;
+    
 }
 
-.forcastDiv {
-    width: 100%;
+.flex{
     display: flex;
-    /* border: 1px solid black; */
-    overflow-x: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+    justify-content: center;
+    margin: 130px auto 70px auto;
+    background-color: rgba(8, 8, 8, 0.671);
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    height: 120px;
+    max-width: 520px;
+    align-items: center;
+
+}
+input{
+    width: 300px;
+    height: 40px;
+    flex-wrap: wrap;
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background-color: #77767662;
+    text-decoration-color: #222;
+    font-family: inherit;
+    font-size: 105%;
+    min-width: 100px;
+}
+
+button{
+    width: 80px;
+    height: 40px;
+    border-radius: 24px;
+    background-color: #77767662;
+    font-family: inherit;
+    font-size: 105%;
+    border: none;
+    color: white;
+}
+button:hover{
+    font-size: 110%;
+    transition: 0.5s;
+}
+
+
+.forcastDiv {
+  display: flex;
+  /* border: 1px solid black; */
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+background-color: rgba(34, 34, 34, 0.171);
+backdrop-filter: blur(5.1px);
+margin-top: 110px;
+
+  
 }
 
 .forcastDiv::-webkit-scrollbar {
-    display: none;
-    /* Chrome */
+  display: none;
+  /* Chrome */
+ 
+  
 }
 
-.forcastDiv>.forcastCard {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+.forcastDiv > .forcastCard {
+  /* From https://css.glass */
+  background-color: rgba(8, 8, 8, 0.671);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  display: flex;
+  height: 250px;
+  /* width: 1200px; not working */
+  margin: 20px;
+  padding: 20px 20px 20px 20px;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInLeft;
+  animation-duration: 3s;
+}
 
+.forcastDiv > .forcastCard > .day {
+  font-size: 24px;
+  background-color: rgba(226, 221, 221, 0.593);;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.593);
+  font-weight: bold;
+  width: 60px;
+  height: 33px;
+  display: flex;
+  justify-content: center ;
+  padding: 2px;
+}
+.min,.max {
+    padding-bottom: 5px;
+    font-size: 13px;
+    color: rgb(218, 218, 218);
+    font-weight: 100;
+}
+.dep{
+    font-size: 1rem;
+    color: white;
     display: flex;
-    height: 250px;
-    /* width: 1200px; not working */
-    margin: 20px;
-    padding: 20px 60px 20px 60px;
-    flex-direction: column;
-    align-items: center;
-}
-
-.forcastDiv>.forcastCard>.day {
-    font-size: 24px;
-    background-color: white;
-    border-radius: 15px;
-    padding: 5px 10px 5px 10px;
-
-    font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.593);
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
 }
