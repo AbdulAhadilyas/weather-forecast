@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
-<img src="" alt="" id="op">
-    <div id="forcastDiv" class="forcastDiv">
-        <!-- <div class="forcastCard">
-            <div class="day">Tue</div>
-            <img class="img" src="./img/04d@2x.png" alt="">
-            <div class="min">Min: 20</div>
-            <div class="max">Max: 20</div>
-        </div> -->
+  <body id="body">
+  
+    <div class="flex" id="op">  
+      <div id="input" class="input">
+        <span id="btn" class="btn"> </span>
+      </div>
     </div>
-    <script src="./app.js"></script>
-    
-</body>
 
+    <!-- <div>
+      <canvas id="myChart"></canvas>
+    </div> -->
+
+    <div id="forcastDiv" class="forcastDiv"></div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
